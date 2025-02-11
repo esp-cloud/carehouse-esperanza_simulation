@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <!-- 画面幅に合わせて拡大縮小する -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ケアハウスエスペランザ利用料シミュレーション</title>
+  <!-- 外部CSSファイルの読み込み -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ケアハウスエスペランザ 利用料シミュレーション</h1>
+
+    <!-- 部屋タイプ -->
+    <div class="section">
+      <h2>部屋タイプ選択</h2>
+      <div class="room-type-container">
+        <label>
+          <input type="radio" name="roomType" value="1" checked onclick="updateUI()" />
+          1人部屋
+        </label>
+        <label>
+          <input type="radio" name="roomType" value="2" onclick="updateUI()" />
+          2人部屋
+        </label>
+      </div>
+    </div>
+
+    <!-- 夫婦チェック (2人部屋のみ) -->
+    <div class="section hidden" id="marriedSection">
+      <h2>二人部屋に入居する場合のお二人の続柄</h2>
+      <label>
+        <input type="checkbox" id="marriedCheck" onclick="updateUI()" />
+        夫婦の場合はチェック
+      </label>
+    </div>
+
+    <!-- 入居者1の収入階層区分 -->
+    <div class="section" id="occupant1Section">
+      <h2>年間の収入金額<span class="small-note">※昨年1～12月の年間の収入金額を選択してください</span></h2>
+      <p class="hidden small-note" id="marriedNote" style="margin-top:8px;">
+        夫婦の場合は2人の収入金額を合算して2で除した数を選択してください<br>
+      </p>
+      <select id="incomeBracket1">
+        <option value="10000">150万円以下</option>
+        <option value="13000">150万円超～160万円以下</option>
+        <option value="16000">160万円超～170万円以下</option>
+        <option value="19000">170万円超～180万円以下</option>
+        <option value="22000">180万円超～190万円以下</option>
+        <option value="25000">190万円超～200万円以下</option>
+        <option value="30000">200万円超～210万円以下</option>
+        <option value="35000">210万円超～220万円以下</option>
+        <option value="37500">220万円以上</option>
+      </select>
+    </div>
+
+    <!-- 入居者2の収入階層区分 -->
+    <div class="section hidden" id="occupant2Section">
+      <h2>お二人目の年間の収入金額<span class="small-note">※昨年1～12月の年間の収入金額を選択してください</span></h2>
+      <select id="incomeBracket2">
+        <option value="10000">150万円以下</option>
+        <option value="13000">150万円超～160万円以下</option>
+        <option value="16000">160万円超～170万円以下</option>
+        <option value="19000">170万円超～180万円以下</option>
+        <option value="22000">180万円超～190万円以下</option>
+        <option value="25000">190万円超～200万円以下</option>
+        <option value="30000">200万円超～210万円以下</option>
+        <option value="35000">210万円超～220万円以下</option>
+        <option value="37500">220万円以上</option>
+      </select>
+    </div>
+
+    <!-- シミュレーション実行ボタン -->
+    <div class="section">
+      <button onclick="calculateFee()">シミュレーション実行</button>
+    </div>
+
+    <!-- 結果表示 -->
+    <div id="resultSection" class="section hidden">
+      <h2>結果</h2>
+      <div id="resultBox" class="result-box"></div>
+    </div>
+  </div>
+
+  <!-- 外部JSファイルの読み込み -->
+  <script src="script.js"></script>
+</body>
+</html>
