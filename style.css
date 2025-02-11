@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(120deg, #ffc0cb, #ffe4e1);
+}
+.container {
+  max-width: 650px;
+  width: 90%;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* Heading styles */
+h1 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+h2 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.section {
+  margin-bottom: 24px;
+}
+.room-type-container {
+  margin-bottom: 10px;
+}
+/* Button styling */
+button {
+  padding: 10px 20px;
+  border: none;
+  color: #fff;
+  background-color: #ff69b4;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+button:hover {
+  background-color: #ff1493;
+}
+/* Range result styling */
+.range-result {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+.range-result strong {
+  font-weight: 700;
+  color: #333;
+}
+/* Container for result box */
+.result-box {
+  background-color: #fff0f5;
+  padding: 16px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 2px solid #ffb6c1;
+}
+/* Breakdown styling */
+.breakdown {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 2px solid #ff69b4;
+}
+.breakdown h3 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+.breakdown ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+.breakdown li {
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+/* Note text styling */
+p {
+  margin: 8px 0;
+}
+.small-note {
+  font-size: 0.85rem;
+  color: #666;
+}
+.hidden {
+  display: none;
+}
+select {
+  padding: 4px;
+  font-size: 1rem;
+}
+/* タブレットサイズ向けの調整 */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 16px;
+    margin: 20px auto;
+    width: 95%;
+  }
+  h1 {
+    font-size: 1.7rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  p, li {
+    font-size: 1.1rem;
+  }
+  button {
+    font-size: 1.1rem;
+    padding: 12px 20px;
+  }
+  .range-result {
+    font-size: 1rem;
+  }
+  .breakdown h3 {
+    font-size: 1rem;
+  }
+  .breakdown li {
+    font-size: 0.9rem;
+  }
+  .small-note {
+    font-size: 0.8rem;
+  }
+  select {
+    font-size: 0.9rem;
+  }
+}
+/* スマートフォン専用の調整 */
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    margin: 10px auto;
+    padding: 12px;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  p, li {
+    font-size: 1.2rem;
+  }
+  button {
+    font-size: 1.2rem;
+    padding: 14px 24px;
+  }
+  .range-result {
+    font-size: 0.95rem;
+  }
+  .breakdown h3 {
+    font-size: 0.95rem;
+  }
+  .breakdown li {
+    font-size: 0.85rem;
+  }
+  .small-note {
+    font-size: 0.75rem;
+  }
+  select {
+    font-size: 0.85rem;
+  }
+}
